@@ -5,7 +5,7 @@ namespace WpextendLib\AdminNotice;
 /**
 *
 */
-class Notice {
+class AdminNotice {
 
     private static $_instance;
     

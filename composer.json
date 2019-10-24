@@ -1,8 +1,8 @@
 {
     "name": "wpextend-lib/admin-notice",
     "description": "Hook and handle Wordpress admin notifications",
-    "version": "1.0.5",
-    "type": "library",
+    "version": "1.0.6",
+    "type": "package",
     "license": "proprietary",
     "authors": [
         {
