@@ -1,11 +1,11 @@
 <?php
 
-namespace WpextendLib;
+namespace WpextendLib\AdminNotice;
 
 /**
 *
 */
-class AdminNotice {
+class Notice {
 
     private static $_instance;
     
