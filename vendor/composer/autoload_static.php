@@ -9,12 +9,12 @@ class ComposerStaticInit23294f6f65ce4ea795f379fa23db568a
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
-            'Wpextend\\' => 9,
+            'WpextendLib\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Wpextend\\' => 
+        'WpextendLib\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc/classes',
         ),

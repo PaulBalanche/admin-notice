@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpextend;
+namespace WpextendLib;
 
 /**
 *
@@ -9,7 +9,7 @@ class AdminNotice {
 
     private static $_instance;
     
-    static public $session_name = WPEXTEND_PREFIX_DATA_IN_DB,
+    static public $session_name = 'wpe_',
         $prefix_admin_notice = 'WP Extend';
 
 
@@ -95,7 +95,7 @@ class AdminNotice {
                     if( isset($admin_notice['dismissible']) && $admin_notice['dismissible'] )
                         $class.= ' is-dismissible';
 
-                    printf( '<div class="%1$s"><p>%2$s%3$s</p></div>', esc_attr( $class ), ( ! empty($admin_notice['prefix']) ) ? '<strong>' . $admin_notice['prefix'] . '</strong> : ' : '', __( $admin_notice['message'], WPEXTEND_TEXTDOMAIN ) );
+                    printf( '<div class="%1$s"><p>%2$s%3$s</p></div>', esc_attr( $class ), ( ! empty($admin_notice['prefix']) ) ? '<strong>' . $admin_notice['prefix'] . '</strong> : ' : '', __( $admin_notice['message'], 'wpextend_lib_admin_notice' ) );
 
                     if( isset($admin_notice['single_display']) && $admin_notice['single_display'] )
                         unset( $_SESSION[self::$session_name][$key_admin_notice] );

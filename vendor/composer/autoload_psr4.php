@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Wpextend\\' => array($baseDir . '/inc/classes'),
+    'WpextendLib\\' => array($baseDir . '/inc/classes'),
 );
