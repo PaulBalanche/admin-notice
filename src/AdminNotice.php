@@ -1,6 +1,6 @@
 <?php
 
-namespace WpextendLib\AdminNotice;
+namespace Wpextend\Package;
 
 /**
 *
@@ -9,7 +9,7 @@ class AdminNotice {
 
     private static $_instance;
     
-    static public $session_name = 'wpe_',
+    static public $session_name = 'wpextend_',
         $prefix_admin_notice = 'WP Extend';
 
 
@@ -130,16 +130,5 @@ class AdminNotice {
     }
 
 
-
-    /**
-     * Add common missing file
-     * 
-     */
-    public static function add_notice_json_file_missing() {
-        
-        AdminNotice::add_notice( '001', 'Some JSON configuration files do not exist yet. Click <a href="' . add_query_arg( array( 'action' => 'generate_autoload_json_file', '_wpnonce' => wp_create_nonce( 'generate_autoload_json_file' ) ), admin_url( 'admin-post.php' ) ) . '">here</a> to generate them.', 'warning', false, true, self::$prefix_admin_notice );
-    }
-
-
-
+    
 }

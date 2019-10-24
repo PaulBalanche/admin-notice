@@ -1,7 +1,7 @@
 {
-    "name": "wpextend-lib/admin-notice",
-    "description": "Hook and handle Wordpress admin notifications",
-    "version": "1.0.8",
+    "name": "wpextend/package",
+    "description": "WP Extend useful package",
+    "version": "1.1.0",
     "type": "package",
     "license": "proprietary",
     "authors": [
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WpextendLib\\AdminNotice\\": "inc/classes/"
+            "Wpextend\\Package\\": "src/"
         }
     }
 }
