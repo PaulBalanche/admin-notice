@@ -114,7 +114,7 @@ class AdminNotice {
         if( empty($key) || empty($message) )
             return;
 
-        if( ! isset($_SESSION) || ! is_array($_SESSION[self::$session_name]) )
+        if( ! isset($_SESSION) || ! isset($_SESSION[self::$session_name]) || ! is_array($_SESSION[self::$session_name]) )
             $_SESSION[self::$session_name] = [];
         
         if( array_key_exists($key, $_SESSION[self::$session_name] ) )
