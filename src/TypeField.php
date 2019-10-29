@@ -209,7 +209,7 @@ class TypeField {
 
 	 public static function render_input_hidden( $name, $value = '', $repeatable = false ) {
 
-		 $retour_html = '<tr class="tr_'.$name.' tr_input_hidden">
+		 $retour_html = '<tr class="tr_'.$name.'" style="display:none">
 		 <th scope="row"></th>
 		 <td><input name="'.$name.'" type="hidden" id="input_'.$name.'" value="'.$value.'" ></td>
 		 </tr>';
