@@ -49,23 +49,23 @@ class TypeField {
 
 		if( $repeatable ){
 
-			if( is_array($value) ){
+			if( is_array($value) && count($value) > 0 ){
 				foreach($value as $single_value){
-				$retour_html .= '<div class="repeatable_field">
-					<input name="'.$name.'[]" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="'.str_replace('"', '&quot;', $single_value).'" placeholder="'.$placeholder.'" class="regular-text ltr">
-				</div>';
+					$retour_html .= '<div class="repeatable_field">
+						<input name="'.$name.'[]" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="'.str_replace('"', '&quot;', $single_value).'" placeholder="'.$placeholder.'" class="regular-text ltr">
+					</div>';
 				}
 			}
 			else{
-			$retour_html .= '<div class="repeatable_field">
-				<input name="'.$name.'[]" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="" placeholder="'.$placeholder.'" class="regular-text ltr">
-			</div>';
-		}
+				$retour_html .= '<div class="repeatable_field">
+					<input name="'.$name.'[]" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="" placeholder="'.$placeholder.'" class="regular-text ltr">
+				</div>';
+			}
 
-			$retour_html .= '<span class="repeat_field">+ Duplicate text</span>';
+			$retour_html .= '<span class="repeat_field">+ Add row</span>';
 		}
 		else{
-		$retour_html .= '<input name="'.$name.'" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="'.str_replace('"', '&quot;', $value).'" placeholder="'.$placeholder.'" class="regular-text ltr">';
+			$retour_html .= '<input name="'.$name.'" type="text" id="input_'.$name.'" class="input_'.$name.' '.self::$class_input_text.'" value="'.str_replace('"', '&quot;', $value).'" placeholder="'.$placeholder.'" class="regular-text ltr">';
 		}
 
 		if( $in_tab ) {
