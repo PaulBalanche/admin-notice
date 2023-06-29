@@ -2,6 +2,8 @@
 
 namespace Wpextend\Package;
 
+use Wpextend\Package\Helpers;
+
 /**
  *
  */
@@ -321,7 +323,7 @@ class TypeField {
                         <select id="input_'.$name.'" class="input_'.$name.'" name="'.$name.'[]">
                             <option value="null"></option>';
 
-                        if( isAssoc($list_option) ) {
+                        if( Helpers::isAssoc($list_option) ) {
 
                             foreach( $list_option as $key2 => $val2) {
                                 if($val && $val == $key2)
@@ -348,7 +350,7 @@ class TypeField {
                     <select id="input_'.$name.'" class="input_'.$name.'" name="'.$name.'[]">
                         <option value="null"></option>';
 
-                    if( isAssoc($list_option) ) {
+                    if( Helpers::isAssoc($list_option) ) {
                         foreach( $list_option as $key => $val) {
                             if($defaut_value && $defaut_value == $key)
                                 $retour_html .= '<option selected="selected" value="'.$key.'">'.$val.'</option>';
@@ -385,7 +387,7 @@ class TypeField {
 
 			 if( is_array($list_option) && count($list_option) > 0 ) {
 
-				 if( isAssoc($list_option) ) {
+				 if( Helpers::isAssoc($list_option) ) {
 					 foreach( $list_option as $key => $val) {
 
 		                if( is_array($val) ){
@@ -472,7 +474,7 @@ class TypeField {
 		if( is_array($list_option) && count($list_option) > 0 ) {
 
 			$incide = 0;
-			if( isAssoc($list_option) ) {
+			if( Helpers::isAssoc($list_option) ) {
 
 				foreach( $list_option as $key => $val) {
 					if( ($defaut_value && $defaut_value == $key) || ($defaut_value == false && $incide == 0) )
@@ -521,7 +523,7 @@ class TypeField {
 		
 		if( is_array($list_option) && count($list_option) > 0 ) {
 
-			if( isAssoc($list_option) ) {
+			if( Helpers::isAssoc($list_option) ) {
 				foreach( $list_option as $key => $val) {
 					if( is_array($defaut_value) && in_array($key, $defaut_value) )
 						$retour_html .= '<label><input type="checkbox" name="'.$name.'[]" id="'.$name.'_'.$key.'" value="'.$key.'" checked '.$attr_disable.'> '.$val.'</label><br>';
